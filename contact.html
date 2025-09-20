@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — Acme Studio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a href="/" class="brand">Acme<span>Studio</span></a>
+<button id="nav-toggle" aria-controls="main-nav" aria-expanded="false">☰<span class="sr-only">Toggle navigation</span></button>
+<nav id="main-nav" class="site-nav" aria-label="Primary">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html" aria-current="page">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+
+<main class="container">
+<h1>Contact Us</h1>
+
+
+<form id="contactForm" novalidate>
+<label for="name">Name</label>
+<input id="name" name="name" type="text" required>
+
+
+<label for="email">Email</label>
+<input id="email" name="email" type="email" required>
+
+
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="6" required></textarea>
+
+
+<button type="submit" class="btn">Send Message</button>
+<p id="formMsg" aria-live="polite"></p>
+</form>
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+<p>&copy; <span id="year-4"></span> Acme Studio</p>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
