@@ -20,12 +20,22 @@ html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe
 .features{display:flex;gap:1rem;margin:2rem 0}
 .card{background:white;padding:1rem;border-radius:8px;flex:1;box-shadow:0 6px 18px rgba(20,20,50,0.05)}
 .latest .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
-.work{background:white;padding:1.5rem;border-radius:8px;min-height:120px}
+.work{background:white;padding:1.5rem;border-radius:8px;min-height:120px;text-align: center; margin-top: 0.5 rem; font-weight: 500;}
 .site-footer{padding:1.5rem 0;text-align:center;font-size:.9rem}
-
+.latest .grid img{width:100%;height:auto;border-radius: 8px;object-fit: cover;} /* Ensure images fit well within the div nicely */
+.team .grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;}
+.team .card img {width: 100%;border-radius: 8px;object-fit: cover;}
+.team .card h3 {margin: 0.5rem 0 0.25rem;text-align: center;}
+.team .card p {text-align: center;font-size: 0.9rem;}
+.why ul {list-style: disc;padding-left: 1.5rem;}
+.services-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));gap: 1.5rem;margin-top: 2rem;}
+.services-grid .card img {width: 100%;border-radius: 8px;object-fit: cover;}
+.services-grid .card h3 {margin: 0.5rem 0 0.25rem;text-align: center;}
+.services-grid .card p {text-align: center;font-size: 0.9rem;}
+.contact-info {margin: 2rem 0;text-align: center;}
 
 /* Responsive */
-@media (max-width:800px){
+@media (max-width:4000px){
 .site-nav{display:none}
 #nav-toggle{display:inline-block}
 .features{flex-direction:column}
