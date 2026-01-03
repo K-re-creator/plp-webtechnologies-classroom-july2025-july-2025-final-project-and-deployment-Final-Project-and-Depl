@@ -6,20 +6,32 @@
 <title>Acme Studio — Home</title>
 <meta name="description" content="Acme Studio — clean design & web solutions">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <header class="site-header">
 <div class="container header-inner">
-<a href="/" class="brand">Acme<span>Studio</span></a>
-<button id="nav-toggle" aria-controls="main-nav" aria-expanded="false">☰<span class="sr-only">Toggle navigation</span></button>
-<nav id="main-nav" class="site-nav" aria-label="Primary">
-<ul>
+<a href="index.html" class="brand">Acme<span>Studio</span></a>
+<div class="menu">
+<div class="menu-list">
+    <nav>
+<ul class="sidebar">
+<li onclick=hideSidebar()><a href="#"><i class="fa fa-close" style="font-size:26px"></i></a></li>
 <li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
 <li><a href="services.html">Services</a></li>
+<li><a href="about.html">About Us</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
+<ul>
+<li class="hideOnMobile"><a href="index.html">Home</a></li>
+<li class="hideOnMobile"><a href="services.html">Services</a></li>
+<li class="hideOnMobile"><a href="about.html">About Us</a></li>
+<li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+<li class="menu-button" onclick=showSidebar()><a href="#"><i class="fa fa-navicon" style="font-size:24px"></i></a></li>
+</ul>
 </nav>
+</div>
+</div>
 </div>
 </header>
 
@@ -35,6 +47,8 @@
 
 
 <section class="features container">
+<h2>What We Offer</h2>
+<div class="grid">
 <article class="card">
 <h2>Professional</h2>
 <p>Expert producers, songwriters, and engineers at your service.</p>
@@ -47,6 +61,7 @@
 <h2>Support & Guidance</h2>
 <p>Learn, create, and grow with our mentoring and resources.</p>
 </article>
+</div>
 </section>
 
 
@@ -73,10 +88,29 @@
 <footer class="site-footer">
 <div class="container">
 <p>&copy; <span id="year"></span> Acme Studio</p>
+<div class="social-icons">
+<a href="#" target="_blank"><i class="fa fa-facebook" style="font-size:24px; color:#0b82f6"></i></a>
+<a href="#" target="_blank"><i class="fa fa-instagram" style="font-size:24px; color:#0b82f6"></i></a>
+<a href="#" target="_blank"><i class="fa fa-twitter" style="font-size:24px; color:#0b82f6"></i></a>
+</div>
 </div>
 </footer>
 
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        if (sidebar.style.display === 'flex') {
+            sidebar.style.display = 'none';
+        } else {
+            sidebar.style.display = 'flex';
+        }
+    }
 
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+    }
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
