@@ -8,23 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 2) Mobile nav toggle (safer toggling)
-  var navToggle = document.getElementById('nav-toggle');
-  var mainNav = document.getElementById('main-nav');
-  if (navToggle && mainNav) {
-    // ensure a consistent starting state
-    if (navToggle.getAttribute('aria-expanded') !== 'true') {
-      navToggle.setAttribute('aria-expanded', 'false');
-      mainNav.style.display = 'none';
-    }
-
-    navToggle.addEventListener('click', function () {
-      var expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      var newExpanded = !expanded;
-      navToggle.setAttribute('aria-expanded', String(newExpanded));
-      mainNav.style.display = newExpanded ? 'block' : 'none';
-    });
-  }
 
   // 3) Contact form validation (defensive)
   var form = document.getElementById('contactForm');
