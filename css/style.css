@@ -29,7 +29,6 @@ html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe
 .services-grid .card img {width: 100%;border-radius: 8px;object-fit: cover;}
 .services-grid .card h3 {margin: 0.5rem 0 0.25rem;text-align: center;}
 .services-grid .card p {text-align: center;font-size: 0.9rem;}
-.contact-info {margin: 2rem 0;text-align: center;}
 .social-icons{margin-top: 10px;}
 .social-icons a {font-size: 20px;margin: 0 8px;transition: color 0.3s;}
 .social-icons a:hover {color: black;}
